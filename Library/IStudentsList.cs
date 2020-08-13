@@ -2,7 +2,7 @@
 {
     public interface IStudentsList
     {
-        void AddStudent();
+        void AddStudent(Student student);
         void DeleteStudent();
         void GetStudent();
     }

@@ -6,19 +6,13 @@ namespace Library
 {
     public class StudentsList : IStudentsList
     {
-        private static readonly StudentsList _instance;
         private List<IStudent> _studentsList;
         private ILogger _logger;
 
-        private StudentsList(List<IStudent> studentsList, ILogger logger)
+        public StudentsList(List<IStudent> studentsList, ILogger logger)
         {
             _studentsList = studentsList;
             _logger = logger;
-        }
-
-        public static StudentsList CreateStudentsList()
-        {
-            return _instance;
         }
 
         public void DeleteStudent()
@@ -31,9 +25,9 @@ namespace Library
             _logger.ShareMessage("Getting student from our list!");
         }
 
-        public void AddStudent()
+        public void AddStudent(Student student)
         {
-            _logger.ShareMessage("Adding a student to our list!");
+            _logger.ShareMessage($"Adding {student.name} to our list!");
         }
     }
 }

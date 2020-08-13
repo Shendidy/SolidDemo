@@ -1,7 +1,7 @@
 ﻿using System;
 using Library;
 
-namespace Library
+namespace SolidDemo
 {
     class Program
     {
